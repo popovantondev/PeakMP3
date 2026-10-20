@@ -7,7 +7,7 @@
 <!-- public-release:start -->
 **PeakMP3 0.16.0 Preview**
 
-[Download shared installer](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe) · [Guide](https://popovantondev.github.io/PeakMP3/Guide-ru.html) · [Website](https://popovantondev.github.io/PeakMP3/index-ru.html)
+[Скачать общий установщик](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe) · [Инструкция](https://popovantondev.github.io/PeakMP3/Guide-ru.html) · [Сайт](https://popovantondev.github.io/PeakMP3/index-ru.html)
 <!-- public-release:end -->
 
 Здесь находится самостоятельный проект PeakMP3 0.16.0. Общий установщик остаётся в выпуске YouTubeDownloader 2.6.0; опубликованные архивы не изменены.

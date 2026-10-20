@@ -7,7 +7,7 @@ Analoge Audiosteuerung für Windows 7 SP1 x86 und neuere Windows-Versionen. Dich
 <!-- public-release:start -->
 **PeakMP3 0.16.0 Preview**
 
-[Download shared installer](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe) · [Guide](https://popovantondev.github.io/PeakMP3/Guide-de.html) · [Website](https://popovantondev.github.io/PeakMP3/index-de.html)
+[Gemeinsames Setup herunterladen](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe) · [Anleitung](https://popovantondev.github.io/PeakMP3/Guide-de.html) · [Website](https://popovantondev.github.io/PeakMP3/index-de.html)
 <!-- public-release:end -->
 
 Dies ist das eigenständige Projekt PeakMP3 0.16.0. Das gemeinsame Setup bleibt im Release YouTubeDownloader 2.6.0; veröffentlichte Archive sind unverändert.
