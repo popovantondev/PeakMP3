@@ -1,0 +1,31 @@
+name: PeakMP3 source and website
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  website:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python tools/build_site.py
+      - run: git diff --exit-code -- '*.html'
+      - run: python tools/check_site.py
+      - run: node --check website/demo.js
+      - run: node --check website/site.js
+  native-build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: NuGet/setup-nuget@v2
+      - run: nuget install Microsoft.NETFramework.ReferenceAssemblies.net35 -Version 1.0.3 -OutputDirectory _build/references -NonInteractive
+      - shell: powershell
+        run: .\BUILD_PEAK.ps1 -ReferenceDirectory "_build/references/Microsoft.NETFramework.ReferenceAssemblies.net35.1.0.3/build/.NETFramework/v3.5"
