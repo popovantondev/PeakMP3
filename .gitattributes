@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.png binary
+*.webp binary
+*.ico binary
+*.mp3 binary
+*.wav binary
+assets/site/native/** linguist-generated
+music/*/*.json linguist-generated
+music/*/*.json -text
