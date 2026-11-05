@@ -18,4 +18,4 @@ Windows 7 SP1 x86 с SSE2 — обязательная цель; .NET Framework 
 
 ## Контрольные суммы
 
-[SHA256SUMS.txt](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/SHA256SUMS.txt) — shared release 2.6.0
+[SHA256SUMS.txt](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/SHA256SUMS.txt) — общий выпуск 2.6.0

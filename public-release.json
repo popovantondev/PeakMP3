@@ -82,13 +82,13 @@
   },
   "readmes": {
     "en": [
-      "README.md"
+      "README.en.md"
     ],
     "ru": [
-      "docs/README.ru.md"
+      "README.ru.md"
     ],
     "de": [
-      "docs/README.de.md"
+      "README.md"
     ]
   },
   "guides": {
@@ -104,7 +104,7 @@
       "guide": "https://popovantondev.github.io/PeakMP3/Guide-ru.html"
     },
     "de": {
-      "website": "https://popovantondev.github.io/PeakMP3/index-de.html",
+      "website": "https://popovantondev.github.io/PeakMP3/index.html",
       "guide": "https://popovantondev.github.io/PeakMP3/Guide-de.html"
     },
     "en": {

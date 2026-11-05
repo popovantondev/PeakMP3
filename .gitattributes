@@ -7,3 +7,4 @@
 assets/site/native/** linguist-generated
 music/*/*.json linguist-generated
 music/*/*.json -text
+assets/kit/* text eol=lf

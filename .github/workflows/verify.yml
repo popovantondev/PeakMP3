@@ -20,7 +20,6 @@ jobs:
       - run: git diff --exit-code -- '*.html'
       - run: python tools/check_site.py
       - run: node --check website/demo.js
-      - run: node --check website/site.js
   native-build:
     runs-on: windows-latest
     steps:

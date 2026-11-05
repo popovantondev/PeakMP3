@@ -2,7 +2,7 @@
 
 ## Changes
 
-This repository is the development home of PeakMP3 0.16.0. The shared installer remains in YouTubeDownloader 2.6.0; its archives are unchanged. The website has three licensed 24-second examples at prepared densities 0–10. It does not process visitors’ files. Music is CC BY 4.0; see [credits](music/CREDITS.md).
+This is the standalone PeakMP3 0.16.0 project. The shared installer remains in YouTubeDownloader 2.6.0; its archives are unchanged. The website has three licensed 24-second examples at prepared densities 0–10. It does not process visitors’ files. Music is CC BY 4.0; see [credits](../music/CREDITS.md).
 
 ## Compatibility
 

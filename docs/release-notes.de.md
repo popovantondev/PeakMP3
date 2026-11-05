@@ -18,4 +18,4 @@ Windows 7 SP1 x86 mit SSE2 ist das Ziel; .NET Framework 3.5 / CLR2 mit CLR4-Fall
 
 ## Prüfsummen
 
-[SHA256SUMS.txt](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/SHA256SUMS.txt) — shared release 2.6.0
+[SHA256SUMS.txt](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/SHA256SUMS.txt) — gemeinsames Release 2.6.0
