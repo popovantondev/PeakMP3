@@ -121,3 +121,6 @@ body.peak-site{background:radial-gradient(ellipse at 50% 0,#fffcf6,#e9e1d3 95%);
 :root:not([data-theme]) .actions .button.ppk-btn .ppk-chip{background:#fff8e9;color:#4f4a40}
 :root:not([data-theme]) .ppk-footer{border-top-color:#4c3b29}
 }
+/* Link from the guide to the program page. */
+.guide-title .guide-home{margin:0 0 18px}
+.guide-title .guide-home-link{min-height:44px;padding:8px 18px;font-size:17px}

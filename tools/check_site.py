@@ -6,6 +6,7 @@ import hashlib,json,re
 R=Path(__file__).resolve().parents[1]
 LANDING={'ru':'index-ru.html','de':'index.html','en':'index-en.html'}
 GUIDE={x:'Guide-'+x+'.html' for x in ('ru','de','en')}
+HOME={'ru':'← На страницу программы','de':'← Zur Programmseite','en':'← Program page'}
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.refs=[];self.ids=set();self.title='';self._t=False
  def handle_starttag(self,tag,attrs):
@@ -28,6 +29,7 @@ def main():
   for kind,names in (('index',LANDING),('Guide',GUIDE)):
    p=R/names[lang];text=p.read_text(encoding='utf-8');page=Page();page.feed(text)
    assert '<html lang="'+lang+'"' in text and d['version'] in text
+   if kind=='Guide' and not re.search(r'<a\b[^>]*href="'+LANDING[lang]+r'"[^>]*>\s*'+HOME[lang]+r'\s*</a>',text):errors.append(p.name+': no button to the program page')
    for targetlang in ('ru','de','en'):assert names[targetlang] in page.refs,p.name+' lacks a link to '+names[targetlang]
    for ref in page.refs:
     u=urlsplit(ref)
