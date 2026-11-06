@@ -48,7 +48,7 @@ TEXT = {
             installer='Установщик лежит в выпуске YouTube Downloader: обе программы ставятся вместе, отдельного выпуска у PeakMP3 нет.',
             installer_link='Выпуск YouTube Downloader 2.6.0',
             description='Плотность звука, сравнение A/B и сохранение MP3 320 для Windows. Аналоговое управление, как на приборе.',
-            title_home='PeakMP3 — плотность звука, сравнение A/B, MP3 320', title_guide='Инструкция — PeakMP3 0.16.0',
+            title_home='PeakMP3 — плотность звука, сравнение A/B, MP3 320', title_guide='PeakMP3 — Руководство',
             redirect_title='PeakMP3 — переход на немецкую страницу', redirect_text='Перейти на немецкую страницу'),
  'de': dict(nav='Hauptnavigation', all='Alle Programme', search='Suchen', kbd='Strg K', search_label='Programme durchsuchen',
             theme='Farbschema wechseln', legal='Rechtliches', new='NEU', pill='Vorabversion {v} ist da',
@@ -70,7 +70,7 @@ TEXT = {
             installer='Das Setup liegt im Release von YouTube Downloader: Beide Programme werden gemeinsam installiert, ein eigenes PeakMP3-Release gibt es nicht.',
             installer_link='Release YouTube Downloader 2.6.0',
             description='Dichte einstellen, A/B vergleichen und MP3 320 speichern, unter Windows. Analoge Bedienung wie am Gerät.',
-            title_home='PeakMP3 – Dichte einstellen, A/B vergleichen, MP3 320 speichern', title_guide='Anleitung – PeakMP3 0.16.0',
+            title_home='PeakMP3 — Dichte einstellen, A/B vergleichen, MP3 320 speichern', title_guide='PeakMP3 — Anleitung',
             redirect_title='PeakMP3 – Weiterleitung zur deutschen Seite', redirect_text='Weiter zur deutschen Seite'),
  'en': dict(nav='Main navigation', all='All programs', search='Search', kbd='Ctrl K', search_label='Search programs',
             theme='Switch colour scheme', legal='Legal', new='NEW', pill='Preview {v} is out',
@@ -92,7 +92,7 @@ TEXT = {
             installer='The installer is hosted in the YouTube Downloader release: both programs install together, and PeakMP3 has no release of its own.',
             installer_link='YouTube Downloader 2.6.0 release',
             description='Set the density, compare A/B and save MP3 320 on Windows. Analog controls, like a real unit.',
-            title_home='PeakMP3 – set the density, compare A/B, save MP3 320', title_guide='Guide – PeakMP3 0.16.0',
+            title_home='PeakMP3 — set the density, compare A/B, save MP3 320', title_guide='PeakMP3 — User guide',
             redirect_title='PeakMP3 – redirect to the German page', redirect_text='Continue to the German page')}
 
 
@@ -126,11 +126,16 @@ def header(kind, lang):
                                  langs, t['theme'], e(RELEASE['source_url']))
 
 
+FOOTER_LABELS = {'ru': ('Права', 'Сообщить об ошибке'), 'de': ('Rechte', 'Problem melden'), 'en': ('Rights', 'Report a problem')}
+
+
 def kit_footer(lang):
     t = TEXT[lang]
     return ('<footer class="ppk-footer">\n<span>© 2026 Anton Popov · PeakMP3 %s</span>\n'
             '<nav aria-label="%s"><a href="%simpressum.html">Impressum</a><a href="%sdatenschutz.html">Datenschutz</a>'
-            '<a href="%s">GitHub</a></nav>\n</footer>') % (e(RELEASE['version']), t['legal'], PROFILE, PROFILE, e(RELEASE['source_url']))
+            '<a href="%s/blob/main/RIGHTS.md">%s</a><a href="%s">%s</a><a href="%s">GitHub</a></nav>\n</footer>') % (
+        e(RELEASE['version']), t['legal'], PROFILE, PROFILE, e(RELEASE['source_url']), FOOTER_LABELS[lang][0],
+        e(RELEASE['feedback_url']), FOOTER_LABELS[lang][1], e(RELEASE['source_url']))
 
 
 def pill(lang):

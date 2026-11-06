@@ -33,7 +33,7 @@ def guide(l):
  sections=[('install',d['setupTitle'],'<ol>'+''.join('<li>'+e(x)+'</li>' for x in d['setupSteps'][:2])+'</ol>'+c.download(l,True)+'<div class="download-links"><a href="'+c.RELEASE+c.ZIP+'">'+e(d['fullZip'])+'</a><a href="'+c.RELEASE+'SHA256SUMS.txt">'+e(d['checksums'])+'</a></div>'+k.installer_note(l)),('audio',g['audio'],'<ol>'+''.join('<li>'+e(x)+'</li>' for x in g['steps'])+'</ol>'),('calibration',g['cal'],'<p>'+e(g['calText'])+'</p>'),('integration',g['integration'],'<p>'+e(g['integrationText'])+'</p><p><code>%LOCALAPPDATA%\\YTWin7_360_MP3\\extension</code></p><p>'+e(g['integrationHelp'])+'</p><p class="notice">'+e(d['limitation'])+'</p>'),('windows',d['osTitle'],'<p>'+e(d['osText'])+'</p><p>'+e(d['verified'])+'</p>'),('uninstall',d['removeTitle'],'<p>'+e(d['removeText'])+'</p>'),('help',d['helpTitle'],'<p>'+e(g['help'])+'</p>'),('rights',d['rights'],'<p><a href="https://github.com/popovantondev/PeakMP3/blob/main/RIGHTS.md">RIGHTS.md</a> · <a href="https://github.com/popovantondev/YouTubeDownloader/blob/main/THIRD_PARTY_NOTICES.md">FFmpeg / LAME</a> · <a href="music/CREDITS.md">CC BY 4.0</a></p>')]
  toc=''.join('<a href="#'+key+'">'+e(title)+'</a>' for key,title,body in sections)
  content=''.join('<section id="'+key+'"><h2>'+e(title)+'</h2>'+body+'</section>' for key,title,body in sections)
- return '<main id="content"><header class="guide-title"><p class="guide-home"><a class="button secondary guide-home-link" href="'+k.page_name('home',l)+'">'+HOME[l]+'</a></p><p class="section-kicker">'+e(d['guidePreview'])+'</p><h1>'+e(g['title'])+'</h1><p>'+e(g['lead'])+'</p></header><div class="page-body guide-layout"><nav class="guide-toc" aria-label="'+e(d['guideToc'])+'">'+toc+'</nav><div class="guide-content">'+content+'</div></div></main>'+footer(l)
+ return '<main id="content"><header class="guide-title"><p class="guide-home"><a class="button secondary guide-home-link" href="'+k.page_name('home',l)+'">'+HOME[l]+'</a></p><p class="section-kicker">'+e(d['guidePreview'])+'</p><h1>'+e(g['title'])+'</h1><p>'+e(g['lead'])+'</p></header><div class="page-body guide-layout"><nav class="guide-toc" aria-label="'+e(d['guideToc'])+'">'+toc+'</nav><div class="guide-content">'+content+'</div></div></main>'
 
 def write(path,text):
  path.write_bytes(text.encode('utf-8'))
@@ -48,7 +48,7 @@ def main():
   c.D[l]['guidePreview']='PeakMP3 0.16.0 · '+d['shared']
   actions='<div class="actions">'+c.download(l)+k.source_button(l)+'<a class="button secondary" href="Guide-'+l+'.html">'+e(c.D[l]['install'])+'</a></div>'
   hero='<section class="hero product-hero"><div class="hero-copy">'+k.pill(l)+'<h1 class="hero-title">'+''.join('<span>'+e(x)+'</span>' for x in d['title'])+'</h1><p class="lead">'+e(d['lead'])+'</p>'+actions+k.installer_note(l)+c.badges(l)+'</div>'+c.shot(l)+'</section>'
-  body='<main id="content">'+hero+'<div class="wood-divider"></div><div class="page-body">'+k.bento(l)+c.feature_row(c.D[l]['peakFeatures'])+demo(l)+'</div></main>'+footer(l)
+  body='<main id="content">'+hero+'<div class="wood-divider"></div><div class="page-body">'+k.bento(l)+c.feature_row(c.D[l]['peakFeatures'])+demo(l)+'</div></main>'
   for kind,content in [('home',body),('guide',guide(l))]:
    html,t=page(kind,l,content,'<script defer src="website/demo.js?v='+k.SITE_REV+'"></script>' if kind=='home' else '')
    html+=k.kit_footer(l)
