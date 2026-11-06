@@ -16,6 +16,7 @@ CATALOG = {'ru': PROFILE + 'index-ru.html', 'de': PROFILE + 'index.html', 'en': 
 RELEASE = json.loads((R / 'public-release.json').read_text(encoding='utf-8'))
 STACK = 'C# · .NET'  # catalog_stacks['PeakMP3'] in the profile
 SETUP = 'YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe'
+SITE_REV = '2026.11.06-perf'  # ?v= of website/*.css and demo.js: raise it when they change, or browsers keep the old copy
 
 
 def kit_version():
@@ -102,8 +103,9 @@ def head(lang, title, description, extra_scripts=''):
             '<title>' + e(title) + '</title><link rel="icon" href="assets/site/peakmp3.svg">'
             '<script src="assets/kit/kit-theme.js"></script>'
             '<link rel="stylesheet" href="assets/kit/kit.css?v=' + v + '">'
-            '<link rel="stylesheet" href="website/site.css"><link rel="stylesheet" href="website/peak.css">'
-            '<link rel="stylesheet" href="website/peak-kit.css">'
+            '<link rel="preload" href="assets/site/fonts/RobotoCondensed.woff2" as="font" type="font/woff2" crossorigin>'
+            '<link rel="stylesheet" href="website/site.css?v=' + SITE_REV + '"><link rel="stylesheet" href="website/peak.css?v=' + SITE_REV + '">'
+            '<link rel="stylesheet" href="website/peak-kit.css?v=' + SITE_REV + '">'
             '<script src="assets/kit/programs.js?v=' + v + '" defer></script>'
             '<script src="assets/kit/kit.js?v=' + v + '" defer></script>' + extra_scripts)
 

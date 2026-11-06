@@ -18,6 +18,29 @@ class Page(HTMLParser):
   if tag=='title':self._t=False
  def handle_data(self,data):
   if self._t:self.title+=data
+def speed(errors):
+ """Page weight: the demo art is WebP, loaded only near the screen; fonts are WOFF2; own CSS/JS are versioned."""
+ site=R/'assets/site'
+ for png in sorted(site.rglob('*.png')):
+  if png.name.startswith('peakmp3-') or (png.parent==site and png.stem not in ('arm-base','arm-moving','spindle','turntable_plate')):continue
+  if not png.with_suffix('.webp').is_file():errors.append(png.relative_to(R).as_posix()+': no .webp next to it (run tools/optimize_site.py)')
+ art=sum(p.stat().st_size for p in site.rglob('*.webp') if not p.name.startswith(('peakmp3-','listening-room')))
+ if art>1_800_000:errors.append('demo art in WebP is %d bytes (limit 1800000)'%art)
+ for lang in ('ru','de','en'):
+  size=(site/('peakmp3-'+lang+'.webp')).stat().st_size
+  if size>300_000:errors.append('peakmp3-%s.webp is %d bytes (limit 300000)'%(lang,size))
+ demo=(R/'website/demo.js').read_text(encoding='utf-8')
+ if 'audio.src=clipUrl' in demo or 'function attach(' not in demo:errors.append('website/demo.js: the MP3 must be attached to the player only on Play/seek')
+ if '.png' in demo:errors.append('website/demo.js: still loads .png art')
+ if not re.search(r"const start=async\(\)=>\{.*new Image.*new IntersectionObserver\(entries=>\{if\(entries\.some\(x=>x\.isIntersecting\)\)\{watcher\.disconnect\(\);run\(\)",demo,re.S):errors.append('website/demo.js: art must be requested only after the demo comes near the screen')
+ css=(R/'website/site.css').read_text(encoding='utf-8')
+ if "RobotoCondensed.woff2')" not in css.split('}')[0] or not (site/'fonts/RobotoCondensed.woff2').is_file():errors.append('website/site.css: font must be WOFF2 first')
+ for lang,name in (('ru','index-ru.html'),('de','index.html'),('en','index-en.html')):
+  for page in (name,'Guide-'+lang+'.html'):
+   text=(R/page).read_text(encoding='utf-8')
+   for need in ('website/site.css?v=','website/peak.css?v=','website/peak-kit.css?v=','as="font"'):
+    if need not in text:errors.append(page+': missing '+need)
+   if page==name and 'website/demo.js?v=' not in text:errors.append(page+': missing website/demo.js?v=')
 def main():
  d=json.loads((R/'public-release.json').read_text(encoding='utf-8'));errors=[]
  assert d['version']=='0.16.0' and d['shared_distribution']['application_versions']['PeakMP3']==d['version']
@@ -76,6 +99,7 @@ def main():
   for ref in re.findall(r'\]\(([^)#\s]+)(?:#[^)]*)?\)',(R/md).read_text(encoding='utf-8')):
    if urlsplit(ref).scheme:continue
    if not (R/md).parent.joinpath(unquote(ref)).exists():errors.append(md+': missing '+ref)
+ speed(errors)
  assert not any(p.name=='AGENTS.md' for p in R.rglob('*') if '.git' not in p.parts)
  if errors:raise SystemExit('\n'.join(errors))
  print('Verified PeakMP3 0.16.0, six localized pages, shared release, kit parts and 33 music/VU pairs.')

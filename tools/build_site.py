@@ -50,7 +50,7 @@ def main():
   hero='<section class="hero product-hero"><div class="hero-copy">'+k.pill(l)+'<h1 class="hero-title">'+''.join('<span>'+e(x)+'</span>' for x in d['title'])+'</h1><p class="lead">'+e(d['lead'])+'</p>'+actions+k.installer_note(l)+c.badges(l)+'</div>'+c.shot(l)+'</section>'
   body='<main id="content">'+hero+'<div class="wood-divider"></div><div class="page-body">'+k.bento(l)+c.feature_row(c.D[l]['peakFeatures'])+demo(l)+'</div></main>'+footer(l)
   for kind,content in [('home',body),('guide',guide(l))]:
-   html,t=page(kind,l,content,'<script defer src="website/demo.js"></script>' if kind=='home' else '')
+   html,t=page(kind,l,content,'<script defer src="website/demo.js?v='+k.SITE_REV+'"></script>' if kind=='home' else '')
    html+=k.kit_footer(l)
    if kind=='home':html+='<script type="application/json" id="demo-strings">'+json.dumps(dict(c.D[l],**d),ensure_ascii=False).replace('</',r'<\/')+'</script>'
    html+='</body></html>\n'
