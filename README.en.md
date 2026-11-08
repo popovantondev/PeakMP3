@@ -1,10 +1,25 @@
-<div align="center">
-  <img src="assets/site/peakmp3.svg" width="128" alt="PeakMP3 icon">
-</div>
+<!-- ppk-readme:head:start -->
+<a href="https://popovantondev.github.io/PeakMP3/index-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/header-en-dark.16cbe823.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/header-en-light.ca509943.svg" width="880" height="188" alt="PeakMP3 — Vintage controls, audio density, A/B and MP3 320 export. Windows 7 SP1 / 10 / 11 · x86 / x64, Preview 0.16.0"></picture></a>
+<!-- ppk-readme:head:end -->
 
 # PeakMP3
 
 [Русский](README.ru.md) · [Deutsch](README.md) · **English**
+
+<!-- ppk-readme:body:start -->
+<p>
+<a href="https://github.com/popovantondev/YouTubeDownloader/releases/tag/v2.6.0"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-download-en-dark.9b5d9b8b.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-download-en-light.1191e956.svg" width="136" height="36" alt="Download"></picture></a>
+<a href="https://popovantondev.github.io/PeakMP3/index-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-website-en-dark.b422382a.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-website-en-light.61bdfcd4.svg" width="120" height="36" alt="Website"></picture></a>
+<a href="https://popovantondev.github.io/PeakMP3/Guide-en.html"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-guide-en-dark.ae28b78e.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-guide-en-light.30d05efb.svg" width="141" height="36" alt="User guide"></picture></a>
+<a href="https://popovantondev.github.io/PeakMP3/index-en.html#demo"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-demo-en-dark.c5a8f9e0.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-demo-en-light.03990d37.svg" width="171" height="36" alt="Try in browser"></picture></a>
+<a href="https://github.com/popovantondev/PeakMP3/issues/new"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-bug-en-dark.ccd973cf.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/btn-bug-en-light.db2202e3.svg" width="196" height="36" alt="Report a problem"></picture></a>
+</p>
+
+<p><a href="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/assets/site/peakmp3-en.webp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/preview-en-dark.e12777be.webp"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/preview-en-light.a2865964.webp" width="880" height="516" alt="PeakMP3 interface"></picture></a><br>
+<sub><a href="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/assets/site/peakmp3-en.webp">Full screenshot</a></sub></p>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/divider-dark.2b821ace.svg"><img src="https://raw.githubusercontent.com/popovantondev/PeakMP3/main/docs/readme/divider-light.02dd3904.svg" width="880" height="6" alt="Divider"></picture>
+<!-- ppk-readme:body:end -->
 
 Vintage audio controls for Windows 7 SP1 x86 and newer Windows. Choose density, compare A/B, seek on the record and save MP3 320.
 
@@ -13,10 +28,6 @@ Vintage audio controls for Windows 7 SP1 x86 and newer Windows. Choose density, 
 
 [Download shared installer](https://github.com/popovantondev/YouTubeDownloader/releases/download/v2.6.0/YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe) · [Guide](https://popovantondev.github.io/PeakMP3/Guide-en.html) · [Website](https://popovantondev.github.io/PeakMP3/index-en.html)
 <!-- public-release:end -->
-
-**[Try in the browser](https://popovantondev.github.io/PeakMP3/index-en.html#demo)** · **[Report a problem](https://github.com/popovantondev/PeakMP3/issues/new)**
-
-![PeakMP3](assets/site/peakmp3-en.webp)
 
 This is the standalone PeakMP3 0.16.0 project.
 
