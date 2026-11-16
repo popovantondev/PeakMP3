@@ -124,3 +124,17 @@ body.peak-site{background:radial-gradient(ellipse at 50% 0,#fffcf6,#e9e1d3 95%);
 /* Link from the guide to the program page. */
 .guide-title .guide-home{margin:0 0 18px}
 .guide-title .guide-home-link{min-height:44px;padding:8px 18px;font-size:17px}
+/* Phones (2026-11-16): the hero column may shrink below its content, long words and buttons wrap, titles fit 320 px. */
+@media(max-width:780px){
+.hero{grid-template-columns:minmax(0,1fr)}
+.hero-copy,.product-shot{min-width:0}
+.hero-title{font-size:clamp(30px,9.4vw,50px);overflow-wrap:anywhere}
+.lead{overflow-wrap:anywhere}
+.actions .button{white-space:normal;text-align:center}
+.compat{flex-wrap:wrap}
+.compat span{white-space:normal}
+.product-shot img{max-width:100%}
+.installer-note{overflow-wrap:anywhere}
+}
+/* Phones: finger-sized links in the guide's contents (2026-11-16) */
+@media(max-width:640px){.guide-toc a,.download-links a{display:inline-flex;align-items:center;min-height:44px;min-width:44px}}
