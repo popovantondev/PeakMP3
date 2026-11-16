@@ -16,7 +16,7 @@ CATALOG = {'ru': PROFILE + 'index-ru.html', 'de': PROFILE + 'index.html', 'en': 
 RELEASE = json.loads((R / 'public-release.json').read_text(encoding='utf-8'))
 STACK = 'C# · .NET'  # catalog_stacks['PeakMP3'] in the profile
 SETUP = 'YouTubeDownloader-PeakMP3-2.6.0-Preview-Setup.exe'
-SITE_REV = '2026.11.16-mobile'  # ?v= of website/*.css and demo.js: raise it when they change, or browsers keep the old copy
+SITE_REV = '2026.11.16-mobile2'  # ?v= of website/*.css and demo.js: raise it when they change, or browsers keep the old copy
 
 
 def kit_version():

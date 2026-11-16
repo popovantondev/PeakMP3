@@ -138,3 +138,5 @@ body.peak-site{background:radial-gradient(ellipse at 50% 0,#fffcf6,#e9e1d3 95%);
 }
 /* Phones: finger-sized links in the guide's contents (2026-11-16) */
 @media(max-width:640px){.guide-toc a,.download-links a{display:inline-flex;align-items:center;min-height:44px;min-width:44px}}
+/* phones: the example download link is a finger-sized target */
+.export-example{display:inline-flex;align-items:center;min-height:44px}
